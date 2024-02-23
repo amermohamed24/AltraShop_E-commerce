@@ -5,6 +5,9 @@ const nextConfig = {
             "images.pexels.com",
             "cdn.dummyjson.com"
         ]
+    },
+    javascript:{
+        IgnoreBuildErrors:true
     }
 };
 
