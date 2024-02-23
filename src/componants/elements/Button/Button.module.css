@@ -1,0 +1,17 @@
+
+
+.btn{
+    background-color: var(--color-primary);
+    color: white;
+    padding:5px 10px;
+    border-radius: var(--border-size);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+}
+.btn:hover{
+    color: var(--color-primary) ;
+    background-color: black;
+    transform: scale(1.1);
+  }

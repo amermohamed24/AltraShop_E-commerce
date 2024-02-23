@@ -1,0 +1,33 @@
+
+.container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding-bottom: 10px;
+}
+.copyright{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+
+.icon{
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s ease-in;
+}
+
+.icon:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
