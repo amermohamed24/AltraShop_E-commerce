@@ -31,7 +31,7 @@ export default async function Blogs() {
         products.map(product=>
           <div className={styles.product}>
           <div className={styles.imgProduct}>
-            <Image className={styles}src={product.thumbnail}
+            <Image className={styles.img}src={product.thumbnail}
               key={product.id}
               fill={true}
               alt="" 

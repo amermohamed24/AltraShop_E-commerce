@@ -12,6 +12,25 @@
     justify-content: center;
 }
 
+
 .link{
     padding: 5px;
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .links{
+        gap: 5px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .link{
+        margin: 0;
+    }
+    .btn{
+        margin: 5px auto;
+    }
 }

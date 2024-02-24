@@ -7,6 +7,13 @@
     height: 40px;
     padding-bottom: 10px;
 }
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+        gap: 10px;
+        margin:20px auto;
+    }
+}
 .copyright{
     font-size: 15px;
     font-weight: 500;

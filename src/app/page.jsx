@@ -1,9 +1,24 @@
+'use client'
 import Image from "next/image"; 
 import shopping_img from "../../public/images/shopping_online.svg"
 import styles from "./page.module.css"
 import Link from "next/link";
+import {useState,useEffect} from 'react'
 
 export default function Home() {
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", updateScreenSize);
+    updateScreenSize();
+
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.header_para}>
@@ -12,9 +27,17 @@ export default function Home() {
             Browse,choose,and order your favorite products from comfort of your home. </p>
         <button className={styles.btn}><Link href={'/blogs'}>Shop now</Link></button>
       </div>
-      <div className={styles.shopping_img}>
-        <Image src={shopping_img} width={500} height={500} alt="online"/>
-      </div>
+      {!isSmallScreen && (
+        <div className={styles.shopping_img}>
+          <Image
+            src={shopping_img}
+            width={500}
+            height={500}
+            alt="image shopping"
+            className={styles.image}
+          />
+        </div>
+      )}
     </div>
   );
 }

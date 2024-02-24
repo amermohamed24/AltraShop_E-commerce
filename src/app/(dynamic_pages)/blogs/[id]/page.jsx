@@ -28,7 +28,7 @@ export default async function Post({params}) {
       <div className={styles.product}>
         <h1 className={styles.title}>{product.title}</h1>
         <p className={styles.desc}>{product.description}</p>
-        <Image className={styles.image} src={product.thumbnail} width={700} height={300} alt='' />
+        <Image className={styles.large_image} src={product.thumbnail} width={700} height={300} alt='' />
         <div className={styles.imageContainer}>
         {
           product_images.map((img,index)=>

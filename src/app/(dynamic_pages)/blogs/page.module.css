@@ -5,7 +5,13 @@
     gap: 15px;
     margin:20px 0;
 }
-
+@media(max-width:768px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
 .product{
     flex-grow:1;
     border: 1px solid #444;
